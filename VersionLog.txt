@@ -1,0 +1,68 @@
+ver 0.40 
+Add:增加针对，BehaviorDesigner 的扩展Action ScanRotate Task
+
+ver 0.39
+Modify 将某些为特定插件写的扩展类，提取到一个分支里面。
+
+ver 0.38
+Modify:未添加新功能，重构，结构更合理。未来准备实现——Shared+分类=指定插件这样的形式。
+所有的新插件都可以利用Shared里面的内容。
+
+ver 0.37
+ADD:再次重构，代码更加明晰，结构更加清楚。整体修改Tile Based Maze的结构。
+
+ver 0.36
+ADD:增加Slot的功能，令Slot具备向某一个方向检测是否被占用的能力。（注意：配置的时候，如果Slot在碰撞内部，则无法触发碰撞）
+
+
+ver 0.35
+ADD：为所有物件，添加GUID功能
+Modify：改写WorldSaveData派生类的构造函数，是指能够更明晰的继承数据。
+TODO：存储Player的位置和背包数据。
+
+
+Ver 0.34
+Modify:吸附不再判断数量，这个函数不好用，以后再改，暂时不管
+Add:吸附后，按一下右键，旋转90度。
+Add:墙面的设计，预计取消柱子的设计，因为有些麻烦。
+Add:墙，带窗墙，带门墙。
+Remove：柱子——暂时不需要他了。
+
+
+Ver 0.33
+BugFix:修改四个脚的碰撞CheckBox位置和旋转不正确的问题。
+Modify:修改部件的吸附位置为四个角，轻微解决串位的问题。
+Modify:修改is_snap为snap_count,即增加snap当前计数。为了以后实现SnapOnly做准备，有些建筑物是需要最少Snap数量的。比如两个柱子之间的墙体，必须要同时和左右两个柱子相连，才能成功放置。
+
+
+Ver 0.32
+Modify: 变更吸附碰撞Box为碰撞Sphere。
+BugFix:修改当角度为169度左右的时候，BoundBox失效的问题
+BugFix：修改吸附时候的抖动问题。
+Remaining：吸附的时候有时候吸附的位置不正确。
+
+Ver 0.31
+Modify：改变障碍检测方式为，用Box每帧检测。
+BugFix：修改SavedTransform 不是 Detector时，无法取消吸附的bug。
+
+Ver 0.30
+Add:放置基本的Foundation完成，可以正常扣库存，并更新UI显示。
+Add:还需要进一步想办法，解耦合，提代码模块化和独立性。
+
+Ver 0.29
+Add:生成TileMap
+Add:生成TileMaze
+Add:生成PrefabMaze
+Add:基本的AnimTweener功能
+Add:文件Binary序列化功能
+Add:支持建筑系统的LocalPlayer结构
+Add:建筑系统，Foundation的放置条件检测，建筑时候切换Material的功能。
+Add:建筑系统，滚轮缩放，右键旋转建筑物的功能。
+
+
+
+
+
+
+
+
