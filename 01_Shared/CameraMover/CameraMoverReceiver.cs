@@ -7,7 +7,7 @@ namespace GameUtil
 
     public class CameraMoverReceiver : MonoBehaviour
     {
-        public CameraMoverSender.EUpdateType lerp_update_type = CameraMoverSender.EUpdateType.Update;
+        public EUpdateType lerp_update_type = EUpdateType.Update;
         private CameraMoverSender.EPlayerCameraSynType syn_type = CameraMoverSender.EPlayerCameraSynType.DirectSyn;
         private CameraMoverSender.EPlayerCameraSynContentType content_type = CameraMoverSender.EPlayerCameraSynContentType.PositionOnly;
 
@@ -74,7 +74,7 @@ namespace GameUtil
         // Update is called once per frame
         void Update()
         {
-            if (lerp_update_type == CameraMoverSender.EUpdateType.Update) 
+            if (lerp_update_type == EUpdateType.Update) 
             {
                 Lerp(Time.deltaTime);
             }
@@ -82,7 +82,7 @@ namespace GameUtil
 
         void LateUpdate() 
         {
-            if (lerp_update_type == CameraMoverSender.EUpdateType.LateUpdate)
+            if (lerp_update_type == EUpdateType.LateUpdate)
             {
                 Lerp(Time.deltaTime);
             }
@@ -90,7 +90,7 @@ namespace GameUtil
 
         void FixedUpdate() 
         {
-            if (lerp_update_type == CameraMoverSender.EUpdateType.FixedUpdate)
+            if (lerp_update_type == EUpdateType.FixedUpdate)
             {
                 Lerp(Time.fixedDeltaTime);
             }

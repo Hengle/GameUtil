@@ -11,12 +11,7 @@ namespace GameUtil
     public class CameraMoverSender : MonoBehaviour
     {
         public CameraMoverReceiver receiver;
-        public enum EUpdateType 
-        {
-            Update,
-            LateUpdate,
-            FixedUpdate,
-        }
+
         public EUpdateType update_type = EUpdateType.Update;
         public enum EPlayerCameraSynType
         {

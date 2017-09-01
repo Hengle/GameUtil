@@ -10,27 +10,19 @@ namespace GameUtil.Trajectory
     /// </summary>
     public class SphereDeviationTrajectory : MonoBehaviour,iTrajectory
     {
-        TrajectoryParams t_param;
-        float current_deviation;
-        float target_deviation;
-        
-
-        public void ReplaceTrajectorParam(TrajectoryParams param)
+        public TrajectoryParams trajectory_params
         {
-            this.t_param = param;
-            if(this.current_deviation < t_param.min_deviation)
+            get
             {
-                this.current_deviation = t_param.min_deviation;
+                throw new System.NotImplementedException();
             }
-            this.target_deviation = this.current_deviation;
-        }
-        
-        public void OnMove(bool is_begin)
-        {
-            throw new System.NotImplementedException();
+            set
+            {
+                throw new System.NotImplementedException();
+            }
         }
 
-        public void OnHit()
+        public void OnMove(bool is_begin)
         {
             throw new System.NotImplementedException();
         }

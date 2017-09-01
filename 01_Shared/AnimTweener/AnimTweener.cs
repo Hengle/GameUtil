@@ -4,12 +4,7 @@ using System.Collections;
 
 namespace GameUtil
 {
-    public enum EAxis
-    {
-        X,
-        Y,
-        Z,
-    }
+
     
     public abstract class AnimTweener : MonoBehaviour
     {
