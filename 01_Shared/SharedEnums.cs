@@ -12,6 +12,9 @@ namespace GameUtil
         Standing,
         Couching,
         Inching,
+        Standing_HoldBreathing,
+        Couching_HoldBreathing,
+        Inching_HoldBreaching,
         Airing,//挑起，衰落，拱飞，甚至被击震动，暂时统一为Airing状态
     }
 

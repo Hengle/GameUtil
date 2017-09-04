@@ -59,7 +59,6 @@ namespace GameUtil
         }
         ///--->
         
-
         [MenuItem("Custom Scriptable Asset/GeneratorConfig/Prefab Based Maze")]
         public static void CreatePrefabBasedMazeConfig()
         {
@@ -89,6 +88,11 @@ namespace GameUtil
         {
             CreateAsset<TileThemeConfig>("Assets/GameUtil/Resources/Configs/TileMapGroups");
         }
+        
+        [MenuItem("Custom Scriptable Asset/TrajectoryConfig/UnrealisticTrajectory")]
+        public static void CreateUnrealisticTrajectory()
+        {
+            CreateAsset<GameUtil.Trajectory.UnrealisticDeviationParams>("Assets/GameUtil/Resources/Configs/Trajectory");
+        }
     }
-
 }
