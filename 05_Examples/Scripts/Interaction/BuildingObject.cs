@@ -67,7 +67,7 @@ namespace GameUtil.Examples
                 MeshCollider mc = main_collider as MeshCollider;
                 mc.sharedMesh = GetComponent<MeshFilter>().sharedMesh;
 
-                Transform bounding_colliders = transform.FindChild("BoundingColliders");
+                Transform bounding_colliders = transform.Find("BoundingColliders");
                 if (bounding_colliders != null) 
                 {
                     bounds = bounding_colliders.GetComponentsInChildren<BoxCollider>();

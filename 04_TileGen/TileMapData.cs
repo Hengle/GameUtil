@@ -31,7 +31,6 @@ namespace GameUtil.TileGen
         public static TileMapData Load(string save_file_path)
         {
             throw new System.NotImplementedException();
-            return null; 
         }
 
         public int this[int key] 

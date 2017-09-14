@@ -12,7 +12,7 @@ namespace GameUtil.OpenWorld
 
         void OnEnable() 
         {
-            building_root = transform.FindChild("BuildingBlocks");
+            building_root = transform.Find("BuildingBlocks");
             LoadWorld();
         }
 

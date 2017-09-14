@@ -110,10 +110,10 @@ namespace GameUtil.PluginExtension
             avatar_trans.Clear();
             for (int i = 0; i < C_AVATAR_COUNT; i++) avatar_trans.Add(null);
 
-            avatar_trans[C_INDEX_HEAD] = root.FindChild(C_HEAD);
-            avatar_trans[C_INDEX_BACK] = root.FindChild(C_BACK);
-            avatar_trans[C_INDEX_LH] = root.FindChild(C_LEFT_HAND);
-            avatar_trans[C_INDEX_RH] = root.FindChild(C_RIGHT_HAND);
+            avatar_trans[C_INDEX_HEAD] = root.Find(C_HEAD);
+            avatar_trans[C_INDEX_BACK] = root.Find(C_BACK);
+            avatar_trans[C_INDEX_LH] = root.Find(C_LEFT_HAND);
+            avatar_trans[C_INDEX_RH] = root.Find(C_RIGHT_HAND);
         }
     }
 }
