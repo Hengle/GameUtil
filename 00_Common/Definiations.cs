@@ -2,15 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Definiations : MonoBehaviour {
+namespace GameUtil
+{
+    /// <summary>
+    /// 定义轴，很多地方可以用，不知道Unit用有没有默认的轴
+    /// </summary>
+    public enum EAxis
+    {
+        X,
+        Y,
+        Z,
+    }
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    /// <summary>
+    /// 抽出来是因为这个比较通用。
+    /// </summary>
+    public enum EUpdateType
+    {
+        Update,
+        LateUpdate,
+        FixedUpdate,
+    }
+
 }
+
