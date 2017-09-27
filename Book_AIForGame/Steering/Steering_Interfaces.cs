@@ -10,5 +10,8 @@ namespace GameUtil.AI.Steering
         void Update(SteeringAgent agent, SteeringOutput steering, float delta_time);
     }
 
-
+    public interface iOutputSteering<T>where T: struct
+    {
+        bool GetSteering(out T output);
+    }
 }

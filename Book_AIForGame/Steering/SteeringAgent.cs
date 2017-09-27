@@ -61,7 +61,8 @@ namespace GameUtil.AI.Steering
                 cachedRigidbody.angularVelocity = angular_speed_holder;
             }
         }
-
+                
+        public float max_speed = 4.0f;
         #endregion
 
         public SteeringOutput steering;
@@ -81,6 +82,14 @@ namespace GameUtil.AI.Steering
             if (steering_updater == null)
             {
                 Debug.Log("steering updader class not found "+updateClass);
+            }
+        }
+
+        public void ClipSpeed()
+        {
+            if (velocity.magnitude > max_speed)
+            {
+                velocity = velocity.normalized * max_speed;
             }
         }
 

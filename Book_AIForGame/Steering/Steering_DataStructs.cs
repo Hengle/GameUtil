@@ -5,6 +5,15 @@ using UnityEngine;
 
 namespace GameUtil.AI.Steering
 {
+    public struct KinematicData
+    {
+        public Vector3 position;
+        public float orientation;
+
+        public Vector3 velocity;
+        public float rotation;
+    }
+
     /// <summary>
     /// Steering的每帧输出值。
     /// 线加速度和角加速度两个值。
@@ -19,7 +28,7 @@ namespace GameUtil.AI.Steering
     /// <summary>
     /// 这个是比较简单粗暴的方式，没有过度，直接扭过去。
     /// </summary>
-    public struct KinimaticSteeringOutput
+    public struct KinematicSteeringOutput
     {
         public Vector3 velocity;
         public float rotation;
