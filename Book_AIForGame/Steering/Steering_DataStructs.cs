@@ -7,11 +7,46 @@ namespace GameUtil.AI.Steering
 {
     public struct KinematicData
     {
-        public Vector3 position;
-        public float orientation;
-
         public Vector3 velocity;
-        public float rotation;
+        //注意，结构体里面的Rotation
+        public Vector3 angularVelocity;
+        public Vector3 position;
+        public Vector3 orientation;
+
+        public float orientataionY
+        {
+            get
+            {
+                return orientation.y;
+            }
+            set
+            {
+                orientation.y = value;
+            }
+        }
+
+        /// <summary>
+        /// ReadOnly
+        /// </summary>
+        public float orientationYinRad
+        {
+            get
+            {
+                return orientation.y * Mathf.Deg2Rad;
+            }
+        }
+
+        public float angularVelocityY
+        {
+            get
+            {
+                return angularVelocity.y;
+            }
+            set
+            {
+                angularVelocity.y = value;
+            }
+        }
     }
 
     /// <summary>
